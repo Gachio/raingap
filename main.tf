@@ -39,6 +39,7 @@ resource "aws_dynamodb_table" "gap_locks" {
   name             = "filling-up-locks"
   hash_key         = "LockID"
   billing_mode     = "PAY_PER_REQUEST"
+  stream_enabled = true
 
   attribute {
     name = "LockID"
