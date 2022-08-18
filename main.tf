@@ -45,9 +45,6 @@ resource "aws_dynamodb_table" "gap_locks" {
     type = "S"
   }
 
-  replica {
-    region_name = "us-west-2"
-  }
 }
 
 terraform {
