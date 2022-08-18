@@ -49,3 +49,12 @@ resource "aws_dynamodb_table" "gap_locks" {
     region_name = "us-west-2"
   }
 }
+
+terraform {
+    backend "s3" {
+        bucket = "amfilling"
+        key = "global/s3/terraform.tfstate"
+        dynamodb_table = "filling-up-locks"
+        encrypt = true
+    }
+}
