@@ -39,7 +39,7 @@ resource "aws_dynamodb_table" "gap_locks" {
   name             = "filling-up-locks"
   hash_key         = "LockID"
   billing_mode     = "PAY_PER_REQUEST"
-  stream_enabled = true
+  #stream_enabled = true
 
   attribute {
     name = "LockID"
@@ -47,7 +47,7 @@ resource "aws_dynamodb_table" "gap_locks" {
   }
 
 }
-
+/*
 terraform {
     backend "s3" {
         bucket = "amfilling"
@@ -56,7 +56,7 @@ terraform {
         encrypt = true
     }
 }
-
+*/
 # prints out the Amazon resource name of the S3 bucket
 
 output "s3_bucket_arn" {
