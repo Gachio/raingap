@@ -50,10 +50,7 @@ resource "aws_dynamodb_table" "gap_locks" {
 
 terraform {
     backend "s3" {
-        bucket = "amfilling"
-        key = "global/s3/terraform.tfstate"
-        dynamodb_table = "filling-up-locks"
-        encrypt = true
+    key = "global/s3/terraform.tfstate"
     }
 }
 
